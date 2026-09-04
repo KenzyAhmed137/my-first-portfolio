@@ -1,297 +1,964 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenzy Ahmed - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <meta
+        name="description"
+        content="Kenzy Ahmed - Student, self-taught web developer and technology enthusiast from Egypt."
+    >
+
+    <title>Kenzy Ahmed | Portfolio</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
     <style>
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            font-family: 'Poppins', sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.25), transparent 30%),
+                radial-gradient(circle at 90% 90%, rgba(236, 72, 153, 0.20), transparent 30%),
+                linear-gradient(135deg, #0f172a, #1e1b4b, #111827);
             color: #f8fafc;
             min-height: 100vh;
-            padding: 40px 20px;
-            line-height: 1.6;
+            padding: 20px;
         }
 
         .container {
-            max-width: 850px;
-            margin: 0 auto;
+            max-width: 1000px;
+            margin: auto;
         }
 
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 17px 24px;
+            margin-bottom: 25px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 18px;
+            backdrop-filter: blur(15px);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(236, 72, 153, 0.4);
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            background: linear-gradient(to right, #ec4899, #8b5cf6);
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 5px;
         }
 
-        h2 {
-            color: #f472b6;
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 8px;
-        }
-
-        h3 {
-            color: #cbd5e1;
-            font-size: 1.2rem;
-            margin: 15px 0 10px 0;
-        }
-
-        p {
-            color: #cbd5e1;
-            font-size: 1.05rem;
-            margin-bottom: 10px;
-        }
-
-        .cat-img {
-            width: 100%;
-            max-width: 320px;
-            border-radius: 16px;
-            margin-top: 15px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .cat-img:hover {
-            transform: scale(1.03);
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        th, td {
-            padding: 14px 18px;
-            text-align: left;
-        }
-
-        th {
-            background-color: rgba(236, 72, 153, 0.2);
-            color: #f472b6;
-            font-weight: 600;
-        }
-
-        td {
-            background-color: rgba(255, 255, 255, 0.02);
-            color: #e2e8f0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        tr:hover td {
-            background-color: rgba(255, 255, 255, 0.05);
-        }
-
-        .quiz-options {
+        nav ul {
             list-style: none;
-            margin-top: 10px;
-        }
-
-        .quiz-options li {
-            margin-bottom: 10px;
-        }
-
-        .quiz-options label {
-            cursor: pointer;
             display: flex;
-            align-items: center;
-            gap: 10px;
+            flex-wrap: wrap;
+            gap: 18px;
         }
 
-        .btn-link {
-            display: inline-block;
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            color: white;
-            padding: 12px 25px;
+        nav a {
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .btn-link:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(220, 39, 67, 0.6);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #e2e8f0;
-            font-weight: 500;
-        }
-
-        input[type="email"], input[type="password"] {
-            width: 100%;
-            padding: 12px 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            color: white;
-            outline: none;
+            color: #cbd5e1;
+            font-size: 0.9rem;
             transition: 0.3s;
         }
 
-        input[type="email"]:focus, input[type="password"]:focus {
-            border-color: #ec4899;
-            box-shadow: 0 0 10px rgba(236, 72, 153, 0.3);
+        nav a:hover {
+            color: #f472b6;
         }
 
-        .radio-group, .checkbox-group {
-            margin: 15px 0;
+        /* CARDS */
+
+        .card {
+            background: rgba(255,255,255,0.055);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            padding: 35px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+            transition: 0.3s ease;
         }
 
-        .radio-group label, .checkbox-group label {
-            display: inline;
-            font-weight: normal;
-            margin-right: 20px;
-            cursor: pointer;
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(236,72,153,0.35);
         }
 
-        input[type="submit"] {
-            width: 100%;
-            padding: 14px;
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 55px 30px;
+        }
+
+        .cat-image {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid rgba(236,72,153,0.5);
+            margin-bottom: 22px;
+            box-shadow: 0 0 35px rgba(236,72,153,0.25);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 7vw, 4.2rem);
+            margin-bottom: 8px;
             background: linear-gradient(90deg, #ec4899, #8b5cf6);
-            border: none;
-            border-radius: 10px;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.3s ease, transform 0.2s ease;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        input[type="submit"]:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
+        .hero h2 {
+            color: #f9a8d4;
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 18px;
         }
+
+        .hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #cbd5e1;
+            line-height: 1.9;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 27px;
+        }
+
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .primary {
+            color: white;
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+        }
+
+        .secondary {
+            color: #ddd6fe;
+            background: rgba(139,92,246,0.1);
+            border: 1px solid rgba(139,92,246,0.3);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* TITLES */
+
+        .section-title {
+            color: #f472b6;
+            font-size: 1.65rem;
+            margin-bottom: 20px;
+        }
+
+        /* ABOUT */
+
+        .about-text {
+            color: #cbd5e1;
+            line-height: 1.95;
+        }
+
+        .highlight {
+            color: #f9a8d4;
+            font-weight: 600;
+        }
+
+        /* EDUCATION */
+
+        .info-box {
+            padding: 22px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .info-box h3 {
+            color: #f9a8d4;
+            margin-bottom: 8px;
+        }
+
+        .info-box p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 9px 17px;
+            border-radius: 30px;
+            background: rgba(139,92,246,0.12);
+            border: 1px solid rgba(139,92,246,0.25);
+            color: #ddd6fe;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* PROJECTS */
+
+        .project {
+            padding: 25px;
+            margin-bottom: 16px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: 0.3s;
+        }
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project:hover {
+            transform: translateX(6px);
+            border-color: rgba(236,72,153,0.35);
+        }
+
+        .project h3 {
+            color: #f9a8d4;
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+            line-height: 1.75;
+            margin-bottom: 14px;
+        }
+
+        .project-link {
+            color: #c4b5fd;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project-link:hover {
+            color: #f472b6;
+        }
+
+        /* CERTIFICATES */
+
+        .certificate {
+            padding: 21px;
+            margin-bottom: 14px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.035);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .certificate:last-child {
+            margin-bottom: 0;
+        }
+
+        .certificate h3 {
+            color: #f9a8d4;
+            margin-bottom: 6px;
+        }
+
+        .certificate p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        /* ACHIEVEMENTS */
+
+        .achievement {
+            padding: 21px;
+            margin-bottom: 14px;
+            border-left: 4px solid #ec4899;
+            background: rgba(255,255,255,0.035);
+            border-radius: 12px;
+        }
+
+        .achievement:last-child {
+            margin-bottom: 0;
+        }
+
+        .achievement h3 {
+            color: #f9a8d4;
+            margin-bottom: 6px;
+        }
+
+        .achievement p {
+            color: #cbd5e1;
+            line-height: 1.75;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-text {
+            max-width: 680px;
+            margin: auto;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            padding: 13px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            background: linear-gradient(90deg, #ec4899, #8b5cf6);
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 25px rgba(236,72,153,0.3);
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px 10px;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            body {
+                padding: 12px 9px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 13px;
+            }
+
+            nav ul {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .card {
+                padding: 25px 20px;
+            }
+
+            .hero {
+                padding: 40px 18px;
+            }
+
+            .cat-image {
+                width: 135px;
+                height: 135px;
+            }
+
+            .buttons,
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .button,
+            .contact-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
     </style>
+
 </head>
+
+
 <body>
 
-    <div class="container">
 
-        <!-- Header / About Section -->
-        <div class="card">
-            <h1>Kenzy Ahmed</h1>
-            <h2>Hello! 👋</h2>
-            <p>My name is <b style="color: #ec4899;">Kenzy</b>. I am learning programming. My favourite subject is <u style="color: #8b5cf6;">math</u>.</p>
-            <h3>I am a student</h3>
-            <p>I like programming!</p>
+<div class="container">
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">
+            Kenzy Ahmed
         </div>
 
-        <!-- Pet Section -->
-        <div class="card">
-            <h2>My Cute Cat 🐾</h2>
-            <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cute Cat" class="cat-img">
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#education">Education</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#certificates">Certificates</a>
+            </li>
+
+            <li>
+                <a href="#achievements">Achievements</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="card hero">
+
+
+        <!-- صورة القطة -->
+
+        <img
+            src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=500"
+            alt="Cute Cat"
+            class="cat-image"
+        >
+
+
+        <h1>
+            Kenzy Ahmed
+        </h1>
+
+
+        <h2>
+            Student • Self-Taught Web Developer
+        </h2>
+
+
+        <p>
+
+            I am a third-year secondary school student
+            from Kafr El-Dawar, Beheira, Egypt.
+
+            I am passionate about programming, technology,
+            creativity, and continuous learning.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#projects"
+                class="button primary"
+            >
+                My Projects
+            </a>
+
+
+            <a
+                href="https://github.com/KenzyAhmed137"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button secondary"
+            >
+                GitHub
+            </a>
+
         </div>
 
-        <!-- Team & Grades Table -->
-        <div class="card">
-            <h2>My Team & Grades</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Age</th>
-                        <th>Degree</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Malak</td><td>15</td><td>30</td></tr>
-                    <tr><td>Kareem</td><td>14</td><td>30</td></tr>
-                    <tr><td>Ahmed</td><td>13</td><td>30</td></tr>
-                    <tr><td>Kenzy</td><td>17</td><td>30</td></tr>
-                </tbody>
-            </table>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section
+        class="card"
+        id="about"
+    >
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+
+        <p class="about-text">
+
+            My name is
+            <span class="highlight">
+                Kenzy Ahmed
+            </span>.
+
+            I am an Egyptian secondary school student
+            from Kafr El-Dawar, Beheira.
+
+            <br><br>
+
+            I started learning programming independently
+            and learned HTML and CSS through an online
+            YouTube course.
+
+            I used these skills to build my own web projects
+            and practice what I learned.
+
+            <br><br>
+
+            I have also studied Python and the fundamentals
+            of Artificial Intelligence through online courses.
+
+            I enjoy learning independently, researching
+            useful resources, and helping my classmates
+            understand programming and school subjects.
+
+        </p>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section
+        class="card"
+        id="education"
+    >
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
+
+        <div class="info-box">
+
+            <h3>
+                Third-Year Secondary School Student
+            </h3>
+
+            <p>
+
+                Kafr El-Dawar Girls Secondary School<br>
+                Beheira, Egypt
+
+            </p>
+
         </div>
 
-        <!-- Quiz Section -->
-        <div class="card">
-            <h2>Quiz / Questions</h2>
-            <p><strong>Do you like programming?</strong></p>
-            <ul class="quiz-options">
-                <li><label><input type="radio" name="quiz" value="yes"> A) Yes</label></li>
-                <li><label><input type="radio" name="quiz" value="no"> B) No</label></li>
-                <li><label><input type="radio" name="quiz" value="maybe"> C) Maybe</label></li>
-            </ul>
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section
+        class="card"
+        id="skills"
+    >
+
+        <h2 class="section-title">
+            Skills & Interests
+        </h2>
+
+
+        <div class="skills">
+
+            <span class="skill">HTML</span>
+
+            <span class="skill">CSS</span>
+
+            <span class="skill">Python</span>
+
+            <span class="skill">Web Development</span>
+
+            <span class="skill">Problem Solving</span>
+
+            <span class="skill">Self-Learning</span>
+
+            <span class="skill">Research</span>
+
+            <span class="skill">Communication</span>
+
+            <span class="skill">Time Management</span>
+
+            <span class="skill">Helping Others</span>
+
         </div>
 
-        <!-- Links Section -->
-        <div class="card">
-            <h2>My Links</h2>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-link">My Instagram Profile</a>
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section
+        class="card"
+        id="projects"
+    >
+
+        <h2 class="section-title">
+            My Projects
+        </h2>
+
+
+        <!-- PROJECT 1 -->
+
+        <div class="project">
+
+            <h3>
+                Personal Portfolio
+            </h3>
+
+            <p>
+
+                A personal portfolio website created while
+                learning HTML and CSS. This project helped
+                me practice web structure, styling,
+                responsive design, and user interface basics.
+
+            </p>
+
+
+            <a
+                href="https://kenzyahmed137.github.io/My_Portfolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+            >
+                View Project →
+            </a>
+
         </div>
 
-        <!-- Contact Form Section -->
-        <div class="card">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                </div>
 
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                </div>
+        <!-- PROJECT 2 -->
 
-                <div class="form-group radio-group">
-                    <p style="margin-bottom: 8px;"><strong>What is your gender?</strong></p>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
-                    
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                </div>
+        <div class="project">
 
-                <div class="form-group checkbox-group">
-                    <input type="checkbox" id="sure" name="confirmation" required>
-                    <label for="sure">Are you sure?</label>
-                </div>
+            <h3>
+                Study Planner
+            </h3>
 
-                <input type="submit" value="Submit">
-            </form>
+            <p>
+
+                A study-planning website designed to help
+                students organize their subjects, tasks,
+                schedules, and study activities.
+
+            </p>
+
+
+            <a
+                href="https://kenzyahmed137.github.io/study-planner/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+            >
+                View Study Planner →
+            </a>
+
         </div>
 
-    </div>
+    </section>
+
+
+    <!-- CERTIFICATES -->
+
+    <section
+        class="card"
+        id="certificates"
+    >
+
+        <h2 class="section-title">
+            Certificates & Learning
+        </h2>
+
+
+        <div class="certificate">
+
+            <h3>
+                🐍 Python Programming — Edraak
+            </h3>
+
+            <p>
+
+                Completed a Python programming course
+                through Edraak.
+
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <h3>
+                🤖 Artificial Intelligence Fundamentals — IBM
+            </h3>
+
+            <p>
+
+                Studied the fundamentals of Artificial
+                Intelligence through IBM.
+
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <h3>
+                ⏱️ Self-Development & Time Management — Vaital
+            </h3>
+
+            <p>
+
+                Completed learning focused on self-development
+                and time management.
+
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <h3>
+                🇬🇧 English Proficiency — EF SET
+            </h3>
+
+            <p>
+
+                Achieved a B2 level in the EF SET English test.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <section
+        class="card"
+        id="achievements"
+    >
+
+        <h2 class="section-title">
+            Achievements & Activities
+        </h2>
+
+
+        <div class="achievement">
+
+            <h3>
+                🏆 Second Place — Student Competition
+            </h3>
+
+            <p>
+
+                Participated in the Top Students competition
+                during preparatory school and achieved
+                second place at the school level.
+
+            </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <h3>
+                📖 Quran Memorization
+            </h3>
+
+            <p>
+
+                Memorized 16 Juz of the Quran with Tajweed
+                and Hafs recitation, and received certificates
+                from my Quran teacher.
+
+            </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <h3>
+                🤝 Helping Classmates
+            </h3>
+
+            <p>
+
+                Helped classmates memorize Quran,
+                understand school subjects, learn HTML,
+                understand programming concepts, and
+                work on programming projects.
+
+            </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <h3>
+                🎨 School Activities
+            </h3>
+
+            <p>
+
+                Participated in school activities including
+                the religious activity in second year of
+                secondary school and the art activity in
+                first year of secondary school.
+
+            </p>
+
+        </div>
+
+
+        <div class="achievement">
+
+            <h3>
+                🤝 Volunteering Experience
+            </h3>
+
+            <p>
+
+                Participated in volunteering activities with
+                Resala STEAM in Alexandria. Although I could
+                not complete the volunteering period, the
+                experience introduced me to community
+                volunteering and teamwork.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section
+        class="card contact"
+        id="contact"
+    >
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+
+        <p class="contact-text">
+
+            Interested in my projects or learning journey?
+            You can find my work and professional profile
+            through the links below.
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+
+            <a
+                href="https://github.com/KenzyAhmed137"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-button"
+            >
+                💻 GitHub
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/kenzy-ahmed-425b2642b"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-button"
+            >
+                💼 LinkedIn
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Kenzy Ahmed
+        </p>
+
+        <p>
+            Learning • Creating • Growing
+        </p>
+
+    </footer>
+
+
+</div>
+
 
 </body>
+
 </html>
